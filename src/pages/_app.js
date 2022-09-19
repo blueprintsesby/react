@@ -7,7 +7,6 @@ import { ThemeProvider } from '@mui/material/styles';
 import { createEmotionCache } from '../utils/create-emotion-cache';
 import { theme } from '../theme';
 import 'antd/dist/antd.min.css';
-import axios from "axios";
 const clientSideEmotionCache = createEmotionCache();
 
 const App = (props) => {
@@ -27,7 +26,7 @@ const App = (props) => {
         />
       </Head>
       <LocalizationProvider dateAdapter={AdapterDateFns}>
-        <ThemeProvider theme={theme} axios={axios}>
+        <ThemeProvider theme={theme}>
           <CssBaseline />
           {getLayout(<Component {...pageProps} />)}
         </ThemeProvider>
